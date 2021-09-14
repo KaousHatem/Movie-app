@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_movie_poster">
+
+    <RadioGroup
+        android:id="@+id/rgSortWay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rBtnUp"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_button_background"
+            android:button="@null"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dimens_padding_btnRadio"
+            android:text="UP"
+            android:textColor="@drawable/text_color_radio_btn"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/rBtnDown"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_button_background"
+            android:button="@null"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dimens_padding_btnRadio"
+            android:text="Down"
+            android:textColor="@drawable/text_color_radio_btn"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="347dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="152dp" />
+
+    <RadioGroup
+        android:id="@+id/rGoupSortType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+        <RadioButton
+            android:id="@+id/rBtnRate"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="Rate"
+            android:background="@drawable/radio_button_background"
+            android:button="@null"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dimens_padding_btnRadio"
+            android:textColor="@drawable/text_color_radio_btn"
+            android:textSize="18sp"/>
+
+        <RadioButton
+            android:id="@+id/rBtnReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="release date"
+            android:background="@drawable/radio_button_background"
+            android:button="@null"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dimens_padding_btnRadio"
+            android:paddingHorizontal="10dp"
+            android:textColor="@drawable/text_color_radio_btn"
+            android:textSize="18sp"/>
+
+        <RadioButton
+            android:id="@+id/rBtnAlphabet"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_button_background"
+            android:button="@null"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dimens_padding_btnRadio"
+            android:text="A-Z"
+            android:textColor="@drawable/text_color_radio_btn"
+            android:textSize="18sp"/>
+
+
+    </RadioGroup>
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <Button
+        android:id="@+id/btnApplySort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
